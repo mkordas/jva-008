@@ -11,7 +11,8 @@ public class StringMatchesTutor extends Tutor {
      */
     public boolean checkIsEmail(String email) {
         return email.matches(
-                "^[A-Za-z\\.-0-9]{2,}@[A-Za-z\\.-0-9]{2,}\\.[A-Za-z]{2,3}$");
+                "\\w+\\@\\w+\\.\\w+(\\.\\w+)?");
+
     }
 
     /**
