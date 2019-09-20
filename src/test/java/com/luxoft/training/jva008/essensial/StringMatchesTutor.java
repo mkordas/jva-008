@@ -1,9 +1,8 @@
+package com.luxoft.training.jva008.essensial;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class StringMatchesTutor extends Tutor {
 

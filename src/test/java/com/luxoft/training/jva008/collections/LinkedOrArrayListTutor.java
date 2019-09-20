@@ -1,12 +1,14 @@
-package com.luxoft.jva008.module04;
+package com.luxoft.training.jva008.collections;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 
-import static com.luxoft.jva008.Logger.log;
+//import static com.luxoft.jva008.Logger.log;
 
 import org.junit.Test;
+
+import static com.luxoft.training.jva008.logger.log;
 
 public class LinkedOrArrayListTutor {
     long start;
