@@ -1,3 +1,5 @@
+package com.luxoft.training.jva008.essensial;
+
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,3 +1,5 @@
+package com.luxoft.training.jva008.essensial;
+
 import static org.junit.Assert.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,7 +16,7 @@ public class RegExpTutor extends Tutor {
 
     public Email getEmail(String emailString) {
         //String regex = "[a-z0-9\\.*]{2,}?@[a-z]{2,}?\\.[a-z]{2,}";
-        String regex = "[@\\.]";
+        String regex = "[@.]";
         String[] strSpl = emailString.split(regex);
         Email email = new Email();
         email.name = strSpl[0];
@@ -31,10 +33,10 @@ public class RegExpTutor extends Tutor {
      * And returns an array of animals
      */
     public String[] getAnimalsArray(String animalsString) {
-        String firstregex = "[:][ ]";
+        String firstregex = ": ";
 
         String[] temp = animalsString.split(firstregex);
-        String secondregex = "[,] ?|\\.";
+        String secondregex = ", ?|\\.";
         String[] animalsList = temp[1].split(secondregex);
         return animalsList;
     }
