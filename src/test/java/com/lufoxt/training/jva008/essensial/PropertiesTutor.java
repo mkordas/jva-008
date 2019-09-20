@@ -3,11 +3,19 @@ package com.lufoxt.training.jva008.essensial;
 import static org.junit.Assert.*;
 
 import java.io.*;
+import java.security.KeyStore;
+import java.util.Map;
 import java.util.Properties;
 
 import org.junit.Test;
 
 public class PropertiesTutor extends Tutor {
+
+    public static void main(String[] args) {
+        for(Map.Entry e:System.getProperties().entrySet()) {
+            System.out.println(e.getKey() + " = " + e.getValue());
+        }
+    }
 
     /**
      * Returns the value of system property java.version
@@ -23,7 +31,7 @@ public class PropertiesTutor extends Tutor {
     public void testJavaVersion() {
         String version = getJavaVersion();
         log(getJavaVersion());
-        assertTrue(version.startsWith("1."));
+        assertTrue(version.matches("1\\.\\d|\\d+"));
     }
 
     /**

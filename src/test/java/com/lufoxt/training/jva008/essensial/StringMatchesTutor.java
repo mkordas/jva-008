@@ -11,7 +11,7 @@ public class StringMatchesTutor extends Tutor {
      */
     public boolean checkIsEmail(String email) {
         return email.matches(
-                "^[A-Za-z\\.-0-9]{2,}@[A-Za-z\\.-0-9]{2,}\\.[A-Za-z]{2,3}$");
+                "[^ ]+@[^ ]+\\..[^ ]");
     }
 
     /**
@@ -25,7 +25,7 @@ public class StringMatchesTutor extends Tutor {
      * And begin with a capital letter
      */
     public boolean checkGreeting(String greeting) {
-        String regex = "^Hi,[\\s]?([A-Z][a-zA-Z]{2,}[\\s]?){2,}[!]$";
+        String regex = "Hi,\\s*?[A-Z].{3,} [A-Z].{3,}!";
         return greeting.matches(regex);
     }
 
@@ -35,6 +35,8 @@ public class StringMatchesTutor extends Tutor {
         assertTrue(checkGreeting("Hi,James Jones!"));
         assertTrue(checkGreeting("Hi, James Smith!"));
         assertTrue(checkGreeting("Hi, James Smith !"));
+        assertTrue(checkGreeting("Hi,\tJames Smith !"));
+        assertTrue(checkGreeting("Hi,\n\tJames Smith !"));
 
         assertFalse("In the beginning should be Hi and comma",
                 checkGreeting("Hello, James Smith!"));
