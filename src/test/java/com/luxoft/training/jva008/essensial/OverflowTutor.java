@@ -1,3 +1,5 @@
+package com.luxoft.training.jva008.essensial;
+
 import java.math.BigInteger;
 import org.junit.Test;
 
