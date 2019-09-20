@@ -1,6 +1,6 @@
-package com.luxoft.jva008.module04;
+package com.luxoft.training.jva008.collections;
 
-import static com.luxoft.jva008.Logger.log;
+import static com.luxoft.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
@@ -10,19 +10,21 @@ import java.util.Set;
 import org.junit.Test;
 
 /**
- *	Implement method Set<Animal> getAnimalsOrderedByNameSet()
- * 	and method Set<Animal> getAnimalsOrderedByNameSetDesc()
+ * Implement method Set<Animal> getAnimalsOrderedByNameSet()
+ * and method Set<Animal> getAnimalsOrderedByNameSetDesc()
  */
 
 public class ComparableTutor {
-	String [] animals =
-        {"Cow", "Goose", "Cat", "Dog", "Elephant", "Rabbit", "Snake", "Chicken", "Horse", "Human"};
+    String[] animals =
+            {"Cow", "Goose", "Cat", "Dog", "Elephant", "Rabbit", "Snake", "Chicken", "Horse", "Human"};
 
-    class Animal{
+    class Animal {
         String name;
+
         public Animal(String name) {
             this.name = name;
         }
+
         @Override
         public String toString() {
             return name;
@@ -30,18 +32,17 @@ public class ComparableTutor {
     }
 
     /**
-	 * Method should return a Set of Animal instances, alphabetically sorted
-	 * Use TreeSet for that and implement Comparable interface in Animal class.
+     * Method should return a Set of Animal instances, alphabetically sorted
+     * Use TreeSet for that and implement Comparable interface in Animal class.
      */
     public Set<Animal> getAnimalsOrderedByNameSet() {
         return null;
     }
 
     /**
-	 * Method should return a Set of Animal instances,
-	 * ordered by the name in reverse order.
-	 * Use TreeSet for that and pass a Comparator implementation as a parameter.
-     *
+     * Method should return a Set of Animal instances,
+     * ordered by the name in reverse order.
+     * Use TreeSet for that and pass a Comparator implementation as a parameter.
      */
     public Set<Animal> getAnimalsOrderedByNameSetDesc() {
         return null;
@@ -49,12 +50,12 @@ public class ComparableTutor {
 
     public String joinByCycle(Collection<?> c) {
         if (c == null) {
-        	return "";
+            return "";
         }
         StringBuilder builder = new StringBuilder();
-        for (Object s: c) {
+        for (Object s : c) {
             builder.append(s);
-            if (builder.length()>0) builder.append(", ");
+            if (builder.length() > 0) builder.append(", ");
         }
         return builder.toString();
     }

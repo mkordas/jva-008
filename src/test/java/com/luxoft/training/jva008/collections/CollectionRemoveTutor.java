@@ -1,8 +1,9 @@
-package com.luxoft.jva008.module04;
+package com.luxoft.training.jva008.collections;
 
+import static com.luxoft.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static com.luxoft.jva008.Logger.log;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,27 +13,27 @@ import java.util.List;
 import org.junit.Test;
 
 /**
- * 1) Remove all entrances of word "Cow" and print the result 
+ * 1) Remove all entrances of word "Cow" and print the result
  * 2) Remove all entrances having 3 letters and print the result
- * 3) Implement method removeIf which will take interface ShouldRemove as a parameter: 
- * <T> List<T> removeIf(List<T> list, ShouldRemove<T> shouldRemove) 
+ * 3) Implement method removeIf which will take interface ShouldRemove as a parameter:
+ * <T> List<T> removeIf(List<T> list, ShouldRemove<T> shouldRemove)
  * This method have to iterate over the list and
  * remove those elements for which ShouldRemove.check() returns true
  */
 
 interface ShouldRemove<T> {
-	boolean check(T elem);
+    boolean check(T elem);
 }
 
 public class CollectionRemoveTutor {
-	String[] animals = { "Cow", "Goose", "Cat", "Dog", "Elephant", "Rabbit", "Snake", "Chicken", "Horse", "Human" };
+    String[] animals = {"Cow", "Goose", "Cat", "Dog", "Elephant", "Rabbit", "Snake", "Chicken", "Horse", "Human"};
 
     public String joinByCycle(Collection<?> c) {
         StringBuilder builder = new StringBuilder();
-        for (Object item: c) {
+        for (Object item : c) {
             builder.append(item);
-            if (builder.length() > 0) { 
-            	builder.append(", ");
+            if (builder.length() > 0) {
+                builder.append(", ");
             }
         }
         return builder.toString();
@@ -42,7 +43,7 @@ public class CollectionRemoveTutor {
         return new ArrayList<String>(Arrays.asList(animals));
     }
 
-	// Remove all entrances of word "Cow"
+    // Remove all entrances of word "Cow"
     public void unCow(List<String> list) {
 
     }

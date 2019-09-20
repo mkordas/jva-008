@@ -1,4 +1,7 @@
+package com.luxoft.training.jva008.essensial;
+
 import java.math.BigInteger;
+
 import org.junit.Test;
 
 public class OverflowTutor extends Tutor {
@@ -8,9 +11,9 @@ public class OverflowTutor extends Tutor {
     public Integer multiply(int a, int b) {
         BigInteger value = BigInteger.valueOf(a).
                 multiply(BigInteger.valueOf(b));
-        if ((value.compareTo(BigInteger.valueOf(Integer.MIN_VALUE))==-1)
-                || (value.compareTo(BigInteger.valueOf(Integer.MAX_VALUE))==1)) {
-            throw new ArithmeticException("Integer overflow: actual multuply result="+value.toString());
+        if ((value.compareTo(BigInteger.valueOf(Integer.MIN_VALUE)) == -1)
+                || (value.compareTo(BigInteger.valueOf(Integer.MAX_VALUE)) == 1)) {
+            throw new ArithmeticException("Integer overflow: actual multuply result=" + value.toString());
         }
         return value.intValue();
     }
@@ -19,19 +22,20 @@ public class OverflowTutor extends Tutor {
     public void testOverflow() {
         int i1 = 34524235;
         int i2 = 23423423;
-        int overflowed = i1*i2;
-        log("i1*i2="+overflowed);
+        long overflowed = (long) i1 * i2;
+        log("i1*i2=" + overflowed);
         try {
             multiply(i1, i2);
-        } catch(ArithmeticException e) {
+        } catch (ArithmeticException e) {
             log(e.getMessage());
         }
     }
 
     @Test
     public void testSum() {
-        Double d = Double.POSITIVE_INFINITY*10;
-        log("doubleMultiply="+d);
+        Double d = Double.POSITIVE_INFINITY * 10;
+        log("doubleMultiply=" + d);
+        Double x = 5.0;
     }
 
 }

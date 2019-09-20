@@ -1,9 +1,9 @@
+package com.luxoft.training.jva008.essensial;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import org.junit.Test;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import org.junit.Test;
 
 public class StringMatchesTutor extends Tutor {
 
@@ -12,7 +12,7 @@ public class StringMatchesTutor extends Tutor {
      */
     public boolean checkIsEmail(String email) {
         return email.matches(
-                "^[A-Za-z\\.-0-9]{2,}@[A-Za-z\\.-0-9]{2,}\\.[A-Za-z]{2,3}$");
+                "[^ ]*@.*\\..*");
     }
 
     /**
@@ -26,7 +26,7 @@ public class StringMatchesTutor extends Tutor {
      * And begin with a capital letter
      */
     public boolean checkGreeting(String greeting) {
-        String regex = "^Hi,[\\s]?([A-Z][a-zA-Z]{2,}[\\s]?){2,}[!]$";
+        String regex = "Hi, ?[A-Z].{3,} [A-Z].{3,}!";
         return greeting.matches(regex);
     }
 

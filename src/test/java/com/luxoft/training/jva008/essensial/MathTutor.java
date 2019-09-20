@@ -1,3 +1,5 @@
+package com.luxoft.training.jva008.essensial;
+
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
@@ -31,8 +33,8 @@ public class MathTutor {
     public double getHypotenuse(double cathetus1,
                                 double cathetus2) {
         double d = Math.sqrt(Math.pow(cathetus1, 2) + Math.pow(cathetus2, 2));
-        int temp = (int)Math.round((d * Math.pow(10 , 2)));
-        return ((double)temp)/Math.pow(10 , 2);
+        int temp = (int) Math.round((d * Math.pow(10, 2)));
+        return ((double) temp) / Math.pow(10, 2);
     }
 
     @Test
@@ -42,6 +44,13 @@ public class MathTutor {
 
         assertEquals(3.61, hyp, 0);
     }
+
+    @Test
+    public void testGetHypotenuse2() {
+        double hyp = getHypotenuse(3,4);
+        assertEquals(5, hyp,0);
+    }
+
 
     /**
      * Tests the occupancy range MIN_AGE..MAX_AGE

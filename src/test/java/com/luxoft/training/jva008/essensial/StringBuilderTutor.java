@@ -1,10 +1,12 @@
+package com.luxoft.training.jva008.essensial;
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 public class StringBuilderTutor extends Tutor {
 
-    String [] animals =
+    String[] animals =
             {"Cow", "Goose", "Cat", "Dog", "Elephant",
                     "Rabbit", "Snake", "Chicken", "Horse", "Human"};
 
@@ -16,13 +18,13 @@ public class StringBuilderTutor extends Tutor {
     public String getAnimalsString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Animal list:");
-        for(int i =0; i<animals.length-1; i++) {
+        for (int i = 0; i < animals.length - 1; i++) {
             sb.append(" ")
                     .append(animals[i])
                     .append(",");
         }
         sb.append(" ")
-                .append(animals[animals.length-1])
+                .append(animals[animals.length - 1])
                 .append(".");
         return sb.toString();
     }
@@ -30,7 +32,7 @@ public class StringBuilderTutor extends Tutor {
     @Test
     public void testGetAnimalsString() {
         String animalsString = getAnimalsString();
-        assertEquals("Animal list: Cow, Goose, Cat, Dog, Elephant, "+
+        assertEquals("Animal list: Cow, Goose, Cat, Dog, Elephant, " +
                 "Rabbit, Snake, Chicken, Horse, Human.", animalsString);
     }
 

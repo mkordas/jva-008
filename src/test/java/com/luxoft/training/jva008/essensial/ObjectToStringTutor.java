@@ -1,3 +1,5 @@
+package com.luxoft.training.jva008.essensial;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,9 +30,9 @@ public class ObjectToStringTutor extends Tutor {
     @Test
     public void testEmployees() {
         List<Employee> employees = getEmployees();
-        int index=0;
-        for (Employee employee: employees) {
-            log("emp"+ index++ +"="+employee);
+        int index = 0;
+        for (Employee employee : employees) {
+            log("emp" + index++ + "=" + employee);
         }
     }
 
