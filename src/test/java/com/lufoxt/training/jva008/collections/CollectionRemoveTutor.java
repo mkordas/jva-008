@@ -1,8 +1,8 @@
-package com.luxoft.jva008.module04;
+package com.lufoxt.training.jva008.collections;
 
+import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static com.luxoft.jva008.Logger.log;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,3 +1,5 @@
+package com.lufoxt.training.jva008.essensial;
+
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;

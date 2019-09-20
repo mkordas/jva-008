@@ -1,4 +1,4 @@
-package com.luxoft.jva008.module04;
+package com.lufoxt.training.jva008.collections;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -9,7 +9,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import static com.luxoft.jva008.Logger.log;
+import static com.lufoxt.training.jva008.Logger.log;
+
 
 public class CollectionUtilitiesTutor {
 	String [] animals =

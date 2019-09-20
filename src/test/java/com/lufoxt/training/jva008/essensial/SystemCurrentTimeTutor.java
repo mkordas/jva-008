@@ -1,3 +1,5 @@
+package com.lufoxt.training.jva008.essensial;
+
 import static org.junit.Assert.*;
 
 import java.util.Calendar;
@@ -15,16 +17,16 @@ public class SystemCurrentTimeTutor {
     }
 
     /**
-     * profiler should calculate how much seconds taken by
-     * Runnable.run() method execution
+     * profiler should calculate how much miliseconds taken by
+     * Runnable.runnable() method execution
      *
-     * @param run
+     * @param runnable
      * @return
      */
-    public long profiler(Runnable run) {
-        long bufor=System.currentTimeMillis();
-        run.run();
-        return System.currentTimeMillis()-bufor;
+    public long profiler(Runnable runnable) {
+        long start = System.currentTimeMillis();
+        runnable.run();
+        return System.currentTimeMillis()- start;
     }
 
     /**
