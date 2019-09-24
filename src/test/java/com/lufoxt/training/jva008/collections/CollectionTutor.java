@@ -1,14 +1,10 @@
-package com.luxoft.jva008.module04;
-
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+package com.lufoxt.training.jva008.collections;
 
 import org.junit.Test;
 
-import static com.luxoft.jva008.Logger.log;
+import java.util.*;
+
+import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

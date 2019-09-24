@@ -1,15 +1,15 @@
-package com.luxoft.jva008.module04;
+package com.lufoxt.training.jva008.collections;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static com.luxoft.jva008.Logger.log;
+import com.lufoxt.training.jva008.Logger;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * 1) Remove all entrances of word "Cow" and print the result 
@@ -59,11 +59,11 @@ public class CollectionRemoveTutor {
 
         list = getAnimals();
         unCow(list);
-        log("list after remove: " + joinByCycle(list));
+        Logger.log("list after remove: " + joinByCycle(list));
 
         list = getAnimals();
         un3Letterization(list);
-        log("list after remove 3 letters animals: " + joinByCycle(list));
+        Logger.log("list after remove 3 letters animals: " + joinByCycle(list));
     }
 
     @Test
