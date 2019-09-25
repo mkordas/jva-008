@@ -44,12 +44,12 @@ public class CollectionRemoveTutor {
 
 	// Remove all entrances of word "Cow"
     public void unCow(List<String> list) {
-
+        list.removeIf(s -> s=="Cow");
     }
 
     // Remove all entrances having 3 letters
     public void un3Letterization(List<String> list) {
-
+        list.removeIf(s -> s.length()==3);
     }
 
 

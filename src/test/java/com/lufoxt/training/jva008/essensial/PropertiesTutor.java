@@ -3,11 +3,18 @@ package com.lufoxt.training.jva008.essensial;
 import static org.junit.Assert.*;
 
 import java.io.*;
+import java.util.Map;
 import java.util.Properties;
 
 import org.junit.Test;
 
 public class PropertiesTutor extends Tutor {
+
+    public static void main(String[] args) {
+        for (Map.Entry e:System.getProperties().entrySet()) {
+            System.out.println(e.getKey() + ": " + e.getValue());
+        }
+    }
 
     /**
      * Returns the value of system property java.version
@@ -23,17 +30,17 @@ public class PropertiesTutor extends Tutor {
     public void testJavaVersion() {
         String version = getJavaVersion();
         log(getJavaVersion());
-        assertTrue(version.startsWith("1."));
+        assertTrue(version.matches("1\\.\\d|\\d+"));
     }
 
     /**
-     * Loads properties-file from folder files/props.properties
+     * Loads properties-file from folder files/props.properties (jbalicki - changed path)
      * and returns the loaded properties
      * @return
      */
     public Properties getProperties() {
         Properties prop = new Properties();
-        try (InputStream is = new FileInputStream("files/props.properties")) {
+        try (InputStream is = new FileInputStream("src/test/resources/props.properties")) {
             prop.load(is);
         } catch (FileNotFoundException e1) {
             e1.printStackTrace();
