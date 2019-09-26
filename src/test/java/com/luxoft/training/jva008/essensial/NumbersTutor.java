@@ -17,60 +17,62 @@ public class NumbersTutor {
 
     /**
      * Convert of various number types
+     *
      * @param n
      */
     public void covertNumbers(Number n) {
-        log(n.getClass().getSimpleName()+" n="+n);
-        log("n.byteValue()="+n.byteValue());
-        log("n.shortValue()="+n.shortValue());
-        log("n.intValue()="+n.intValue());
-        log("n.longValue()="+n.longValue());
-        log("n.doubleValue()="+n.doubleValue());
-        log("n.floatValue()="+n.floatValue());
+        log(n.getClass().getSimpleName() + " n=" + n);
+        log("n.byteValue()=" + n.byteValue());
+        log("n.shortValue()=" + n.shortValue());
+        log("n.intValue()=" + n.intValue());
+        log("n.longValue()=" + n.longValue());
+        log("n.doubleValue()=" + n.doubleValue());
+        log("n.floatValue()=" + n.floatValue());
         log("--------------");
     }
 
     /**
      * Convert from String to various number types
+     *
      * @param s
      */
     public void stringToNumber(String s) {
-        log("=== Convert string "+s+" to Number ===");
+        log("=== Convert string " + s + " to Number ===");
         try {
             Byte wrappedByte = new Byte(s);
-            log("Byte value="+wrappedByte);
+            log("Byte value=" + wrappedByte);
         } catch (NumberFormatException e) {
-            System.out.println("Convert to Byte: Bad Number Format: "+s);
+            System.out.println("Convert to Byte: Bad Number Format: " + s);
         }
         try {
             Short wrappedShort = new Short(s);
-            log("Short value="+wrappedShort);
+            log("Short value=" + wrappedShort);
         } catch (NumberFormatException e) {
-            System.out.println("Convert to Short: Bad Number Format: "+s);
+            System.out.println("Convert to Short: Bad Number Format: " + s);
         }
         try {
             Integer wrappedInt = new Integer(s);
-            log("Integer value="+wrappedInt);
+            log("Integer value=" + wrappedInt);
         } catch (NumberFormatException e) {
-            System.out.println("Convert to Integer: Bad Number Format: "+s);
+            System.out.println("Convert to Integer: Bad Number Format: " + s);
         }
         try {
             Long wrappedLong = new Long(s);
-            log("Long value="+wrappedLong);
+            log("Long value=" + wrappedLong);
         } catch (NumberFormatException e) {
-            System.out.println("Convert to Long: Bad Number Format: "+s);
+            System.out.println("Convert to Long: Bad Number Format: " + s);
         }
         try {
             Float wrappedFloat = new Float(s);
-            log("Float value="+wrappedFloat);
+            log("Float value=" + wrappedFloat);
         } catch (NumberFormatException e) {
-            System.out.println("Convert to Float: Bad Number Format: "+s);
+            System.out.println("Convert to Float: Bad Number Format: " + s);
         }
         try {
             Double wrappedDouble = new Double(s);
-            log("Double value="+wrappedDouble);
+            log("Double value=" + wrappedDouble);
         } catch (NumberFormatException e) {
-            System.out.println("Convert to Double: Bad Number Format: "+s);
+            System.out.println("Convert to Double: Bad Number Format: " + s);
         }
     }
 
@@ -89,9 +91,9 @@ public class NumbersTutor {
     @Test
     public void testIsNaN() {
         log("=== testIsNaN() ===");
-        log ("Double.isNaN(Math.sqrt(-4)) = "+
+        log("Double.isNaN(Math.sqrt(-4)) = " +
                 Double.isNaN(Math.sqrt(-4)));
-        log ("Double.isInfinite(Double.MAX_VALUE * 2) = "+
+        log("Double.isInfinite(Double.MAX_VALUE * 2) = " +
                 Double.isInfinite(Double.MAX_VALUE * 2));
     }
 

@@ -20,14 +20,14 @@ public class SystemCurrentTimeTutor {
 
     /**
      * profiler should calculate how much milliseconds taken by
-     * Runnable.runable() method execution
+     * Runnable.runnable() method execution
      *
-     * @param runable
+     * @param runnable
      * @return
      */
-    public long profiler(Runnable runable) {
+    public long profiler(Runnable runnable) {
         long start = System.currentTimeMillis();
-        runable.run();
+        runnable.run();
         long end = System.currentTimeMillis() ;
         log("start " + start);
         log("end " + end);
