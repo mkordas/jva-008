@@ -89,7 +89,7 @@ public class SystemCurrentTimeTutor {
 
     @Test
     public void testForProfiler() {
-        assertTrue(noOperationProfiler()<=0);
+        assertTrue(noOperationProfiler()<=1);
         assertTrue(forProfiler()>0);
     }
 

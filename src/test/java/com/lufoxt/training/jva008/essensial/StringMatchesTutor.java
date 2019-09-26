@@ -61,5 +61,3 @@ public class StringMatchesTutor extends Tutor {
         assertFalse(checkIsEmail("ivanov@mailcom"));
     }
 }
-//email original regex: ^[A-Za-z\\.-0-9]{2,}@[A-Za-z\\.-0-9]{2,}\\.[A-Za-z]{2,3}$
-//greetings original regex: ^Hi,[\s]?([A-Z][a-zA-Z]{2,}[\s]?){2,}[!]$
