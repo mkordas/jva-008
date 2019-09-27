@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -20,13 +21,13 @@ import java.util.stream.Stream;
 
 public class  UrlWordCount {
 
-    private static final Pattern wordPattern = Pattern.compile("([A-Za-z]+)");
+    private static final Pattern wordPattern = Pattern.compile("\\b[\\p{IsAlphabetic}]+{5}\\b");
 
 
     public static void main(String[] args) throws IOException {
         URLConnection urlConnection = new URL("https://onet.pl").openConnection();
         BufferedReader reader = new BufferedReader(new InputStreamReader(
-                urlConnection.getInputStream()));
+                urlConnection.getInputStream(), StandardCharsets.UTF_8));
         Map<String, Long> map = reader.lines().flatMap(s -> {
             Matcher matcher = wordPattern.matcher(s);
             List<String> list = new ArrayList<>();
@@ -35,11 +36,16 @@ public class  UrlWordCount {
             }
             return list.stream();
         }).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        //SortedMap<String, Long> sortedMap = new TreeMap<>(map);
+
         List<Map.Entry<String, Long>> sortedEntries = map.entrySet().stream().sorted(
                 Map.Entry.comparingByValue(Comparator.reverseOrder())).collect(Collectors.toList());
-        System.out.println(sortedEntries);
-        //System.out.println(map);
+        for (Map.Entry<String, Long> e : sortedEntries) {
+            System.out.println(e);
+        }
+
+        System.out.println(sortedEntries.stream().filter(e -> e.getValue() == 1).count());
+        ;
+
     }
 }
 
