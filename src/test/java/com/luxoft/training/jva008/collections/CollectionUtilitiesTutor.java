@@ -11,9 +11,6 @@ import org.junit.Test;
 
 import static com.luxoft.training.jva008.Logger.log;
 
-
-import static com.luxoft.training.jva008.Logger.log;
-
 public class CollectionUtilitiesTutor {
 	String [] animals =
         {"Cow", "Goose", "Cat", "Dog", "Elephant", "Rabbit", "Snake", "Chicken", "Horse", "Human"};

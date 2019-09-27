@@ -26,9 +26,8 @@ public class StringMatchesTutor extends Tutor {
      * And begin with a capital letter
      */
     public boolean checkGreeting(String greeting) {
-       // String regex = "^Hi,[\\s]?([A-Z][a-zA-Z]{2,}[\\s]?){2,}[!]$";
-        String regex = "Hi, ?[A-Z].{3,} [A-Z].{3,}!";
-        return greeting.matches(regex);
+       String regex = "Hi, ?[A-Z].{3,} [A-Z].{3,}!";
+       return greeting.matches(regex);
     }
 
     @Test
