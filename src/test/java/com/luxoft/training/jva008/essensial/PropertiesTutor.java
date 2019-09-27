@@ -9,11 +9,6 @@ import java.util.Properties;
 import org.junit.Test;
 
 public class PropertiesTutor extends Tutor {
-//    public static void main(String[] args) {
-//        for (Map.Entry e : (System.getProperties().entrySet())) {
-//            System.out.println(e.getKey() + " = " + e.getValue());
-//        }
-//    }
 
     /**
      * Returns the value of system property java.version
