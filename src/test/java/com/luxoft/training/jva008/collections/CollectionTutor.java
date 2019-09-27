@@ -8,7 +8,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-//import static com.luxoft.jva008.Logger.log;
+
 import static com.luxoft.training.jva008.logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
