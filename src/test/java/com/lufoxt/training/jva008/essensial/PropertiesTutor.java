@@ -13,7 +13,6 @@ public class PropertiesTutor extends Tutor {
     public static void main(String[] args) {
 
     }
-    }
 
     /**
      * Returns the value of system property java.version
