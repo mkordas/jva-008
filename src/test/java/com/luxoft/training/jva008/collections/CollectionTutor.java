@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -35,7 +37,8 @@ public class CollectionTutor {
    * The method must return a Set with all the animals
    */
    public Set<String> getAnimalsSet() {
-       return null;
+       //Logger.log(String.join("," Arrays.s));
+       return new HashSet<>(Arrays.asList(animals));
    }
 
    /**
@@ -44,7 +47,12 @@ public class CollectionTutor {
 	* separated by commas, using for cycle
    */
    public String joinByCycle(Collection<?> c) {
-       return null;
+       StringBuilder builder = new StringBuilder();
+       for (Object o : c) {
+           builder.append(o).append(",");
+       }
+        builder.delete(builder.length()-1, builder.length());
+       return builder.toString();
    }
 
    /**
@@ -53,7 +61,13 @@ public class CollectionTutor {
 	* separated by commas, using iterator
    */
    public String joinByIterator(Collection<?> c) {
-       return null;
+       Iterator<?> iterator = c.iterator();
+       StringBuilder builder = new StringBuilder();
+       while (iterator.hasNext()) {
+           builder.append(iterator.next()).append(",");
+       }
+       builder.delete(builder.length() - 1, builder.length());
+       return builder.toString();
    }
 
    @Test

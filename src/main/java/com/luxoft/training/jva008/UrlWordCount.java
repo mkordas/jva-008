@@ -28,7 +28,7 @@ public class UrlWordCount {
     public static void main(String[] args) throws IOException {
         URLConnection urlConnection = new URL("https://onet.pl").openConnection();
         BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), StandardCharsets.UTF_8));
-        Map<String, Long> map = reader.lines().flatMap(line -> {
+        Map<String, Long> map = reader.lines().parallel().flatMap(line -> {
             Matcher matcher = wordPattern.matcher(line);
             List<String> list = new ArrayList<>();
             while (matcher.find()) {
