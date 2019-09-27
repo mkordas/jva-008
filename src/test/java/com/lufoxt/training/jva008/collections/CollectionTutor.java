@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
@@ -44,7 +45,8 @@ public class CollectionTutor {
 	* separated by commas, using for cycle
    */
    public String joinByCycle(Collection<?> c) {
-       return null;
+       String commaDelimitedStream = c.stream().map(Object::toString).collect(Collectors.joining(","));
+       return commaDelimitedStream;
    }
 
    /**
