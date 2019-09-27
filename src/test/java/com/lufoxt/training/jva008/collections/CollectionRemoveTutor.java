@@ -1,6 +1,5 @@
 package com.lufoxt.training.jva008.collections;
 
-import com.lufoxt.training.jva008.Logger;
 import org.junit.Test;
 
 import java.util.ArrayList;
