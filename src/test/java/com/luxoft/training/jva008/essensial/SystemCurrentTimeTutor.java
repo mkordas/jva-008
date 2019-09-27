@@ -1,11 +1,11 @@
-package com.lufoxt.training.jva008.essensial;
+package com.luxoft.training.jva008.essensial;
 
+import com.luxoft.training.jva008.Logger;
 import org.junit.Test;
 
 import java.util.Calendar;
 import java.util.Date;
 
-import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -52,10 +52,10 @@ public class SystemCurrentTimeTutor {
     @Test
     public void testGetDate() {
         Date date = getDate(1363877852603L);
-        log(date.toString());
+        Logger.log(date.toString());
         assertEquals(date.getTime(), 1363877852603L);
         Date dateOfBeginning = getDate(0);
-        log(dateOfBeginning.toString());
+        Logger.log(dateOfBeginning.toString());
         assertEquals(dateOfBeginning.getTime(), 0);
     }
 
@@ -70,10 +70,10 @@ public class SystemCurrentTimeTutor {
         cal2.set(2013, 3, 3, 12, 30, 0);
         cal2.clear(Calendar.MILLISECOND);
         Date datePlus = getDatePlus(cal.getTime(), 2);
-        log(cal.getTime().toString());
-        log(datePlus.toString());
-        log(cal2.getTime().toString());
-        log(datePlus.getTime()+":"+cal2.getTimeInMillis());
+        Logger.log(cal.getTime().toString());
+        Logger.log(datePlus.toString());
+        Logger.log(cal2.getTime().toString());
+        Logger.log(datePlus.getTime()+":"+cal2.getTimeInMillis());
         assertEquals("datePlus() return the wrong date",
                 datePlus, cal2.getTime());
     }

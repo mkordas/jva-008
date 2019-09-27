@@ -1,5 +1,6 @@
-package com.lufoxt.training.jva008.collections;
+package com.luxoft.training.jva008.collections;
 
+import com.luxoft.training.jva008.Logger;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -8,8 +9,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-
-import static com.lufoxt.training.jva008.Logger.log;
 
 public class CollectionUtilitiesTutor {
 	String [] animals =
@@ -22,32 +21,32 @@ public class CollectionUtilitiesTutor {
 			 builder.append(iterator.next())
 			        .append(" ");
 		}
-		log(builder.toString());
+		Logger.log(builder.toString());
 	}
 
 	@Test
 	public void testUtilities() {
 		List<String> list = Arrays.asList(animals);
-		log("== print the resulting list");
+		Logger.log("== print the resulting list");
 		print(list);
 		
-		log("== print the shuffled list");
+		Logger.log("== print the shuffled list");
 		Collections.shuffle(list);
 		print(list);
 		
-		log("== print the sorted list (used natural ordering)");
+		Logger.log("== print the sorted list (used natural ordering)");
 		Collections.sort(list);
 		print(list);
 		
-		log("== binary Search of Elephant after sorting: " + Collections.binarySearch(list, "Elephant"));
+		Logger.log("== binary Search of Elephant after sorting: " + Collections.binarySearch(list, "Elephant"));
 
-		log("== print the reversed list");
+		Logger.log("== print the reversed list");
 		Collections.reverse(list);
 		print(list);
 		
-		log("== binary Search of Elephant without sorting: " + Collections.binarySearch(list, "Elephant"));
+		Logger.log("== binary Search of Elephant without sorting: " + Collections.binarySearch(list, "Elephant"));
 		
-		log("== print the sorted by length list of word");
+		Logger.log("== print the sorted by length list of word");
 		Collections.sort(list, new Comparator<String>() {
 			@Override
 			public int compare(String o1, String o2) {
@@ -56,30 +55,30 @@ public class CollectionUtilitiesTutor {
 		});
 		print(list);
 
-		log("== max (used natural ordering): " + Collections.max(list));
-		log("== min (used natural ordering): " + Collections.min(list));
+		Logger.log("== max (used natural ordering): " + Collections.max(list));
+		Logger.log("== min (used natural ordering): " + Collections.min(list));
 		
-		log("== frequency of Cow: " + Collections.frequency(list, "Cow"));
-		log("== frequency of Human: " + Collections.frequency(list, "Human"));
+		Logger.log("== frequency of Cow: " + Collections.frequency(list, "Cow"));
+		Logger.log("== frequency of Human: " + Collections.frequency(list, "Human"));
 		
-		log("== replace Cow to Pig: ");
+		Logger.log("== replace Cow to Pig: ");
 		Collections.replaceAll(list, "Cow", "Pig");
 		print(list);
 		
-		log("== swap: swap first and last values: ");
+		Logger.log("== swap: swap first and last values: ");
 		Collections.swap(list, 0, list.size()-1);
 		print(list);
 		
-		log("== rotate: rotate by 2: ");
+		Logger.log("== rotate: rotate by 2: ");
 		Collections.rotate(list, 2);
 		print(list);
 		
-		log("== indexOfSubList: look for sublist in the list ");
+		Logger.log("== indexOfSubList: look for sublist in the list ");
 		List<String> subList = Arrays.asList(new String[]{list.get(5),list.get(6)});
 		print(subList);
-		log("sublist position: " + Collections.indexOfSubList(list, subList));
+		Logger.log("sublist position: " + Collections.indexOfSubList(list, subList));
 		
-		log("== fill: fill list with the same values: ");
+		Logger.log("== fill: fill list with the same values: ");
 		Collections.fill(list, ".");
 		print(list);
 	}

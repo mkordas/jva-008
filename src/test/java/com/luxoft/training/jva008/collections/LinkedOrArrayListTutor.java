@@ -1,12 +1,11 @@
-package com.lufoxt.training.jva008.collections;
+package com.luxoft.training.jva008.collections;
 
+import com.luxoft.training.jva008.Logger;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
-
-import static com.lufoxt.training.jva008.Logger.log;
 
 public class LinkedOrArrayListTutor {
     long start;
@@ -26,7 +25,7 @@ public class LinkedOrArrayListTutor {
 	}
 	
 	public void nextTimeLog(String operation) {
-		log("Time of work for " + operation + ": " + (new Date().getTime() - start));
+		Logger.log("Time of work for " + operation + ": " + (new Date().getTime() - start));
 		start = new Date().getTime();
 	}
 	

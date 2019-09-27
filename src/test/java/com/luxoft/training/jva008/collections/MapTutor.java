@@ -1,5 +1,6 @@
-package com.lufoxt.training.jva008.collections;
+package com.luxoft.training.jva008.collections;
 
+import com.luxoft.training.jva008.Logger;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -8,7 +9,6 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -64,23 +64,23 @@ public class MapTutor {
     @Test
     public void testMap() {
         fillAnimalsLengthMap();
-        log("== printMap animalsLengthMap");
+        Logger.log("== printMap animalsLengthMap");
         printMap(animalsLengthMap);
 
-        log("== printMap treemap animalsLengthMap");
+        Logger.log("== printMap treemap animalsLengthMap");
         SortedMap<String, Integer> sortedMap = new TreeMap<String,Integer>(animalsLengthMap);
         printMap(sortedMap);
 
-        log("== print lengthAnimalsMap");
+        Logger.log("== print lengthAnimalsMap");
         fillLengthAnimalsMap();
         printMapOfSets(lengthAnimalsMap);
 
         SortedMap<Integer,Set<String>> sortedMap2 = new TreeMap<Integer,Set<String>>(lengthAnimalsMap);
 
-        log("== sortedMap headSet where key<6");
+        Logger.log("== sortedMap headSet where key<6");
         printMapOfSets(sortedMap2.headMap(6));
 
-        log("== sortedMap subMap 5..7");
+        Logger.log("== sortedMap subMap 5..7");
         printMapOfSets(sortedMap2.subMap(5,7));
     }
 

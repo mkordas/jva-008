@@ -1,5 +1,6 @@
-package com.lufoxt.training.jva008.collections;
+package com.luxoft.training.jva008.collections;
 
+import com.luxoft.training.jva008.Logger;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -8,7 +9,6 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -27,7 +27,7 @@ public class CollectionTutor {
    * This method should return the ArrayList with all the animals
    */
    public List<String> getAnimalsList() {
-       log(String.join(",", Arrays.asList(animals)));
+       Logger.log(String.join(",", Arrays.asList(animals)));
        return Arrays.asList(animals);
    }
 
@@ -58,12 +58,12 @@ public class CollectionTutor {
 
    @Test
    public void testCollections() {
-       log("getAnimalsList: " + joinByCycle(Arrays.asList(animals)));
+       Logger.log("getAnimalsList: " + joinByCycle(Arrays.asList(animals)));
 
-       log("getAnimalsList: " + joinByCycle(getAnimalsList()));
-       log("getAnimalsSet: " + joinByCycle(getAnimalsSet()));
+       Logger.log("getAnimalsList: " + joinByCycle(getAnimalsList()));
+       Logger.log("getAnimalsSet: " + joinByCycle(getAnimalsSet()));
 
-       log("getAnimalsList by iterator: " + joinByIterator(getAnimalsList()));
+       Logger.log("getAnimalsList by iterator: " + joinByIterator(getAnimalsList()));
    }
 
    @Test

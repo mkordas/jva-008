@@ -1,4 +1,4 @@
-package com.lufoxt.training.jva008;
+package com.luxoft.training.jva008;
 
 public class Logger {
     private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(Logger.class);
