@@ -11,7 +11,7 @@ public class StringMatchesTutor extends Tutor {
      */
     public boolean checkIsEmail(String email) {
         return email.matches(
-                "[^ ]+@[^ ]+\\..[^ ]");
+                "[^ ]+@[^ ]+\\.[^ ]");
     }
 
     /**
