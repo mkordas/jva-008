@@ -1,6 +1,6 @@
-package com.luxoft.jva008.module04;
+package com.lufoxt.training.jva008.collections;
 
-import static com.luxoft.jva008.Logger.log;
+import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;

@@ -1,3 +1,5 @@
+package com.lufoxt.training.jva008.essensial;
+
 import java.math.BigInteger;
 import org.junit.Test;
 
