@@ -1,13 +1,13 @@
 package com.lufoxt.training.jva008.essensial;
 
-import static com.lufoxt.training.jva008.Logger.log;
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 import java.util.Calendar;
 import java.util.Date;
 
-import com.lufoxt.training.jva008.Logger;
-import org.junit.Test;
+import static com.lufoxt.training.jva008.Logger.log;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 public class SystemCurrentTimeTutor {

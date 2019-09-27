@@ -1,6 +1,6 @@
 package com.lufoxt.training.jva008.essensial;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 

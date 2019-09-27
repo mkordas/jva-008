@@ -2,7 +2,11 @@ package com.lufoxt.training.jva008.collections;
 
 import org.junit.Test;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
