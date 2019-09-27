@@ -1,14 +1,16 @@
-package com.lufoxt.training.jva008.collections;
+package com.luxoft.training.jva008.collections;
 
+import com.luxoft.training.jva008.Logger;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -27,7 +29,7 @@ public class CollectionTutor {
    * This method should return the ArrayList with all the animals
    */
    public List<String> getAnimalsList() {
-       log(String.join(",", Arrays.asList(animals)));
+       Logger.log(String.join(",", Arrays.asList(animals)));
        return Arrays.asList(animals);
    }
 
@@ -35,7 +37,8 @@ public class CollectionTutor {
    * The method must return a Set with all the animals
    */
    public Set<String> getAnimalsSet() {
-       return null;
+       //Logger.log(String.join("," Arrays.s));
+       return new HashSet<>(Arrays.asList(animals));
    }
 
    /**
@@ -44,7 +47,12 @@ public class CollectionTutor {
 	* separated by commas, using for cycle
    */
    public String joinByCycle(Collection<?> c) {
-       return null;
+       StringBuilder builder = new StringBuilder();
+       for (Object o : c) {
+           builder.append(o).append(",");
+       }
+        builder.delete(builder.length()-1, builder.length());
+       return builder.toString();
    }
 
    /**
@@ -53,17 +61,23 @@ public class CollectionTutor {
 	* separated by commas, using iterator
    */
    public String joinByIterator(Collection<?> c) {
-       return null;
+       Iterator<?> iterator = c.iterator();
+       StringBuilder builder = new StringBuilder();
+       while (iterator.hasNext()) {
+           builder.append(iterator.next()).append(",");
+       }
+       builder.delete(builder.length() - 1, builder.length());
+       return builder.toString();
    }
 
    @Test
    public void testCollections() {
-       log("getAnimalsList: " + joinByCycle(Arrays.asList(animals)));
+       Logger.log("getAnimalsList: " + joinByCycle(Arrays.asList(animals)));
 
-       log("getAnimalsList: " + joinByCycle(getAnimalsList()));
-       log("getAnimalsSet: " + joinByCycle(getAnimalsSet()));
+       Logger.log("getAnimalsList: " + joinByCycle(getAnimalsList()));
+       Logger.log("getAnimalsSet: " + joinByCycle(getAnimalsSet()));
 
-       log("getAnimalsList by iterator: " + joinByIterator(getAnimalsList()));
+       Logger.log("getAnimalsList by iterator: " + joinByIterator(getAnimalsList()));
    }
 
    @Test

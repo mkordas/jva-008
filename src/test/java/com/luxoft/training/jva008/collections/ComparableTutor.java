@@ -1,12 +1,12 @@
-package com.lufoxt.training.jva008.collections;
+package com.luxoft.training.jva008.collections;
 
+import com.luxoft.training.jva008.Logger;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Set;
 
-import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -61,10 +61,10 @@ public class ComparableTutor {
 
     @Test
     public void testCollections() {
-        log("getAnimalsList: " + joinByCycle(Arrays.asList(animals)));
+        Logger.log("getAnimalsList: " + joinByCycle(Arrays.asList(animals)));
 
-        log("getAnimalsOrderedByNameSet: " + joinByCycle(getAnimalsOrderedByNameSet()));
-        log("getAnimalsOrderedByNameSetDesc: " + joinByCycle(getAnimalsOrderedByNameSetDesc()));
+        Logger.log("getAnimalsOrderedByNameSet: " + joinByCycle(getAnimalsOrderedByNameSet()));
+        Logger.log("getAnimalsOrderedByNameSetDesc: " + joinByCycle(getAnimalsOrderedByNameSetDesc()));
     }
 
     @Test

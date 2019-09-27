@@ -1,4 +1,4 @@
-package com.lufoxt.training.jva008.essensial;
+package com.luxoft.training.jva008.essensial;
 
 import java.util.ArrayList;
 import java.util.List;

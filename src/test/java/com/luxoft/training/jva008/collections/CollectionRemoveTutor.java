@@ -1,5 +1,6 @@
-package com.lufoxt.training.jva008.collections;
+package com.luxoft.training.jva008.collections;
 
+import com.luxoft.training.jva008.Logger;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -7,7 +8,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -59,11 +59,11 @@ public class CollectionRemoveTutor {
 
         list = getAnimals();
         unCow(list);
-        log("list after remove: " + joinByCycle(list));
+        Logger.log("list after remove: " + joinByCycle(list));
 
         list = getAnimals();
         un3Letterization(list);
-        log("list after remove 3 letters animals: " + joinByCycle(list));
+        Logger.log("list after remove 3 letters animals: " + joinByCycle(list));
     }
 
     @Test
