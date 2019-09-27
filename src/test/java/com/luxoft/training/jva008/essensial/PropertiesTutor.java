@@ -34,7 +34,7 @@ public class PropertiesTutor extends Tutor {
      */
     public Properties getProperties() {
         Properties prop = new Properties();
-        try (InputStream is = new FileInputStream("C:\\Users\\qtr-ptc-69\\IdeaProjects\\new\\jva-008\\src\\test\\resources\\props.properties")) {
+        try (InputStream is = new FileInputStream("files/props.properties")) {
             prop.load(is);
         } catch (FileNotFoundException e1) {
             e1.printStackTrace();
