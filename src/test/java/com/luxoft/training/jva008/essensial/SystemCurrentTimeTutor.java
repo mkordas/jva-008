@@ -1,3 +1,6 @@
+package com.luxoft.training.jva008.essensial;
+
+import static com.luxoft.training.jva008.Logger.log;
 import static org.junit.Assert.*;
 
 import java.util.Calendar;
@@ -22,9 +25,9 @@ public class SystemCurrentTimeTutor {
      * @return
      */
     public long profiler(Runnable run) {
-        long bufor=System.currentTimeMillis();
+        long start=System.currentTimeMillis();
         run.run();
-        return System.currentTimeMillis()-bufor;
+        return System.currentTimeMillis()-start;
     }
 
     /**
@@ -47,10 +50,10 @@ public class SystemCurrentTimeTutor {
     @Test
     public void testGetDate() {
         Date date = getDate(1363877852603l);
-//        log(date.toString());
+        log(date.toString());
         assertEquals(date.getTime(), 1363877852603l);
         Date dateOfBeginning = getDate(0);
-//        log(dateOfBeginning.toString());
+        log(dateOfBeginning.toString());
         assertEquals(dateOfBeginning.getTime(), 0);
     }
 
@@ -65,10 +68,10 @@ public class SystemCurrentTimeTutor {
         cal2.set(2013, 3, 3, 12, 30, 0);
         cal2.clear(Calendar.MILLISECOND);
         Date datePlus = getDatePlus(cal.getTime(), 2);
-//        log(cal.getTime().toString());
-//        log(datePlus.toString());
-//        log(cal2.getTime().toString());
-//        log(datePlus.getTime()+":"+cal2.getTimeInMillis());
+        log(cal.getTime().toString());
+        log(datePlus.toString());
+        log(cal2.getTime().toString());
+        log(datePlus.getTime()+":"+cal2.getTimeInMillis());
         assertEquals("datePlus() return the wrong date",
                 datePlus, cal2.getTime());
     }
@@ -82,8 +85,9 @@ public class SystemCurrentTimeTutor {
 
     @Test
     public void testForProfiler() {
-        assertTrue(noOperationProfiler()==0);
+        assertTrue(noOperationProfiler()<=0);
         assertTrue(forProfiler()>0);
+
     }
 
     public long noOperationProfiler() {

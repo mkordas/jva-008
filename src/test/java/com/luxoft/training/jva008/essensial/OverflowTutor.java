@@ -1,3 +1,5 @@
+package com.luxoft.training.jva008.essensial;
+
 import java.math.BigInteger;
 import org.junit.Test;
 
@@ -32,6 +34,7 @@ public class OverflowTutor extends Tutor {
     public void testSum() {
         Double d = Double.POSITIVE_INFINITY*10;
         log("doubleMultiply="+d);
+        Double x = 5.;
     }
 
 }
