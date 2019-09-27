@@ -44,10 +44,6 @@ public class PropertiesTutor extends Tutor {
         return prop;
     }
 
-
-
-
-
     @Test
     public void testGetProperties() {
         Properties props = getProperties();
@@ -58,4 +54,3 @@ public class PropertiesTutor extends Tutor {
     }
 
 }
-
