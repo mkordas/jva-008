@@ -47,8 +47,8 @@ public class MathTutor {
 
     @Test
     public void testGetHypotenuse2() {
-        double hyp = getHypotenuse(3,4);
-        assertEquals(5, hyp,0);
+        double hyp = getHypotenuse(3, 4);
+        assertEquals(5, hyp, 0);
     }
 
 

@@ -28,7 +28,7 @@ public class SystemCurrentTimeTutor {
     public long profiler(Runnable runnable) {
         long start = System.currentTimeMillis();
         runnable.run();
-        long end = System.currentTimeMillis() ;
+        long end = System.currentTimeMillis();
         log("start " + start);
         log("end " + end);
         return end - start;

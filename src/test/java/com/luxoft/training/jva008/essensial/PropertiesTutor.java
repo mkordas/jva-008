@@ -30,6 +30,7 @@ public class PropertiesTutor extends Tutor {
     /**
      * Loads properties-file from folder files/props.properties
      * and returns the loaded properties
+     *
      * @return
      */
     public Properties getProperties() {
