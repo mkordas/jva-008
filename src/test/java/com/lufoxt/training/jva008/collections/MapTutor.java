@@ -1,4 +1,6 @@
-package com.luxoft.jva008.module04;
+package com.lufoxt.training.jva008.collections;
+
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,9 +8,7 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-import org.junit.Test;
-
-import static com.luxoft.jva008.Logger.log;
+import static com.lufoxt.training.jva008.Logger.log;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

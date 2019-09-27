@@ -1,4 +1,7 @@
-import static org.junit.Assert.*;
+package com.lufoxt.training.jva008.essensial;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,10 +40,10 @@ public class MathTutor {
 
     @Test
     public void testGetHypotenuse() {
-        double hyp = getHypotenuse(2, 3);
+        double hyp = getHypotenuse(3, 4);
 //        log(hyp);
 
-        assertEquals(3.61, hyp, 0);
+        assertEquals(5, hyp, 0);
     }
 
     /**

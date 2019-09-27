@@ -1,8 +1,13 @@
-import static org.junit.Assert.*;
+package com.lufoxt.training.jva008.essensial;
+
+import org.junit.Test;
 
 import java.util.Calendar;
 import java.util.Date;
-import org.junit.Test;
+
+import static com.lufoxt.training.jva008.Logger.log;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 public class SystemCurrentTimeTutor {
@@ -46,11 +51,11 @@ public class SystemCurrentTimeTutor {
 
     @Test
     public void testGetDate() {
-        Date date = getDate(1363877852603l);
-//        log(date.toString());
-        assertEquals(date.getTime(), 1363877852603l);
+        Date date = getDate(1363877852603L);
+        log(date.toString());
+        assertEquals(date.getTime(), 1363877852603L);
         Date dateOfBeginning = getDate(0);
-//        log(dateOfBeginning.toString());
+        log(dateOfBeginning.toString());
         assertEquals(dateOfBeginning.getTime(), 0);
     }
 
@@ -65,24 +70,26 @@ public class SystemCurrentTimeTutor {
         cal2.set(2013, 3, 3, 12, 30, 0);
         cal2.clear(Calendar.MILLISECOND);
         Date datePlus = getDatePlus(cal.getTime(), 2);
-//        log(cal.getTime().toString());
-//        log(datePlus.toString());
-//        log(cal2.getTime().toString());
-//        log(datePlus.getTime()+":"+cal2.getTimeInMillis());
+        log(cal.getTime().toString());
+        log(datePlus.toString());
+        log(cal2.getTime().toString());
+        log(datePlus.getTime()+":"+cal2.getTimeInMillis());
         assertEquals("datePlus() return the wrong date",
                 datePlus, cal2.getTime());
     }
 
     @Test
-    public void testGetTimeInMillis() {
+    public void testGetTimeInMillis() throws InterruptedException {
+        long start = getTimeInMillis();
+        Thread.sleep(1);
         assertTrue(
                 "getTimeInMillis() should return time in milliseconds",
-                getTimeInMillis()>1363877852603l);
+                start < getTimeInMillis());
     }
 
     @Test
     public void testForProfiler() {
-        assertTrue(noOperationProfiler()==0);
+        assertTrue(noOperationProfiler()<=1);
         assertTrue(forProfiler()>0);
     }
 
@@ -96,7 +103,11 @@ public class SystemCurrentTimeTutor {
         return profiler(new Runnable() {
             @Override
             public void run() {
-                for (int i=0;i<100000000;i++);
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             }
         });
     }

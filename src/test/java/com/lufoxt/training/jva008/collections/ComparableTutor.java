@@ -1,13 +1,13 @@
-package com.luxoft.jva008.module04;
+package com.lufoxt.training.jva008.collections;
 
-import static com.luxoft.jva008.Logger.log;
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Set;
 
-import org.junit.Test;
+import static com.lufoxt.training.jva008.Logger.log;
+import static org.junit.Assert.assertEquals;
 
 /**
  *	Implement method Set<Animal> getAnimalsOrderedByNameSet()

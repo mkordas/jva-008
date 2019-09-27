@@ -1,9 +1,15 @@
-import static org.junit.Assert.*;
-
-import java.io.*;
-import java.util.Properties;
+package com.lufoxt.training.jva008.essensial;
 
 import org.junit.Test;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class PropertiesTutor extends Tutor {
 
@@ -21,7 +27,7 @@ public class PropertiesTutor extends Tutor {
     public void testJavaVersion() {
         String version = getJavaVersion();
         log(getJavaVersion());
-        assertTrue(version.startsWith("1."));
+        assertTrue(version.matches("1\\.\\d|\\d+"));
     }
 
     /**
