@@ -1,6 +1,9 @@
+package com.luxoft.training.jva008.essensial;
+
 import static org.junit.Assert.*;
 
 import java.io.*;
+import java.util.Map;
 import java.util.Properties;
 
 import org.junit.Test;
@@ -21,7 +24,7 @@ public class PropertiesTutor extends Tutor {
     public void testJavaVersion() {
         String version = getJavaVersion();
         log(getJavaVersion());
-        assertTrue(version.startsWith("1."));
+        assertTrue(version.matches( "1\\.\\d|\\d+"));
     }
 
     /**
@@ -51,4 +54,3 @@ public class PropertiesTutor extends Tutor {
     }
 
 }
-

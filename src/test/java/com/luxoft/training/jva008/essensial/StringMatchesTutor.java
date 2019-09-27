@@ -1,9 +1,8 @@
+package com.luxoft.training.jva008.essensial;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class StringMatchesTutor extends Tutor {
 
@@ -12,7 +11,8 @@ public class StringMatchesTutor extends Tutor {
      */
     public boolean checkIsEmail(String email) {
         return email.matches(
-                "^[A-Za-z\\.-0-9]{2,}@[A-Za-z\\.-0-9]{2,}\\.[A-Za-z]{2,3}$");
+                "\\w+\\@\\w+\\.\\w+(\\.\\w+)?");
+
     }
 
     /**

@@ -1,3 +1,6 @@
+package com.luxoft.training.jva008.essensial;
+
+import static com.luxoft.training.jva008.logger.log;
 import static org.junit.Assert.*;
 
 import java.util.Calendar;
@@ -15,16 +18,16 @@ public class SystemCurrentTimeTutor {
     }
 
     /**
-     * profiler should calculate how much seconds taken by
-     * Runnable.run() method execution
+     * profiler should calculate how much milliseconds taken by
+     * Runnable.runnable() method execution
      *
-     * @param run
+     * @param runnable
      * @return
      */
-    public long profiler(Runnable run) {
-        long bufor=System.currentTimeMillis();
-        run.run();
-        return System.currentTimeMillis()-bufor;
+    public long profiler(Runnable runnable) {
+        long start=System.currentTimeMillis();
+        runnable.run();
+        return System.currentTimeMillis()-start;
     }
 
     /**
@@ -46,12 +49,12 @@ public class SystemCurrentTimeTutor {
 
     @Test
     public void testGetDate() {
-        Date date = getDate(1363877852603l);
-//        log(date.toString());
-        assertEquals(date.getTime(), 1363877852603l);
+        Date date = getDate(1363877852603L);
+        log(date.toString());
+        assertEquals(1363877852603L, date.getTime());
         Date dateOfBeginning = getDate(0);
-//        log(dateOfBeginning.toString());
-        assertEquals(dateOfBeginning.getTime(), 0);
+        log(dateOfBeginning.toString());
+        assertEquals(0, dateOfBeginning.getTime());
     }
 
     @Test
@@ -65,10 +68,10 @@ public class SystemCurrentTimeTutor {
         cal2.set(2013, 3, 3, 12, 30, 0);
         cal2.clear(Calendar.MILLISECOND);
         Date datePlus = getDatePlus(cal.getTime(), 2);
-//        log(cal.getTime().toString());
-//        log(datePlus.toString());
-//        log(cal2.getTime().toString());
-//        log(datePlus.getTime()+":"+cal2.getTimeInMillis());
+        log(cal.getTime().toString());
+        log(datePlus.toString());
+        log(cal2.getTime().toString());
+        log(datePlus.getTime()+":"+cal2.getTimeInMillis());
         assertEquals("datePlus() return the wrong date",
                 datePlus, cal2.getTime());
     }
@@ -82,7 +85,7 @@ public class SystemCurrentTimeTutor {
 
     @Test
     public void testForProfiler() {
-        assertTrue(noOperationProfiler()==0);
+        assertTrue(noOperationProfiler() <= 0);
         assertTrue(forProfiler()>0);
     }
 
