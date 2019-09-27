@@ -1,3 +1,5 @@
+package com.luxoft.training.jva008.essensial;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -51,7 +53,7 @@ public class ArrayCopyTutor {
         if (animals_size < position) {
             throw new IndexOutOfBoundsException();
         } else {
-            System.arraycopy(animals, position+1, animals, position, animals_size);
+            System.arraycopy(animals, position + 1, animals, position, animals_size);
             animals_size--;
         }
     }

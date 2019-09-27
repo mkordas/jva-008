@@ -1,3 +1,5 @@
+package com.luxoft.training.jva008.essensial;
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -49,7 +51,7 @@ public class StringTutor extends Tutor {
                 nameCapital(greeting) &&
                 surnameCapital(greeting) &&
                 surnameThree(greeting)
-                ) {
+        ) {
 
             return true;
         } else {
@@ -61,7 +63,7 @@ public class StringTutor extends Tutor {
         try {
             if ((greeting.substring(greeting.lastIndexOf(" ") + 1, greeting.lastIndexOf("!")).length() >= 3))
                 return true;
-                else return false;
+            else return false;
         } catch (StringIndexOutOfBoundsException e) {
             return false;
         }

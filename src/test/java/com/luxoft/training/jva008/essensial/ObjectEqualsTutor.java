@@ -1,3 +1,5 @@
+package com.luxoft.training.jva008.essensial;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
 
@@ -12,12 +14,12 @@ import org.junit.Test;
 /**
  * Implement the class Employee methods hashCode () and equals () so
  * Compared to the full name, but not the age of the employee.
- *
  */
-public class ObjectEqualsTutor{
+public class ObjectEqualsTutor {
     enum EmployeeType {
         ByName, ByFullName, ByAge, Default
     }
+
     class Employee {
         public String name;
         public String surname;
@@ -28,12 +30,13 @@ public class ObjectEqualsTutor{
             this.surname = surname;
             this.age = age;
         }
+
         public String getFullName() {
-            return this.name+" "+this.surname;
+            return this.name + " " + this.surname;
         }
 
         public String toString() {
-            return this.name+" "+this.surname+", age:"+age;
+            return this.name + " " + this.surname + ", age:" + age;
         }
 
         @Override
@@ -74,14 +77,14 @@ public class ObjectEqualsTutor{
     @Test
     public void testEmployees() {
         List<Employee> employees = getEmployees();
-        int index=0;
-        for (Employee employee: employees) {
+        int index = 0;
+        for (Employee employee : employees) {
 //            log("emp"+ index++ +"="+employee);
         }
 
 //        log("***“Test equals: ***");
         employees = getEmployees();
-        for (int i=0;i<3;i++) {
+        for (int i = 0; i < 3; i++) {
 //            log("emp"+i+".equals(emp"+(i+1)+")="+
 //                    employees.get(i).equals(employees.get(i+1)));
         }
@@ -95,7 +98,7 @@ public class ObjectEqualsTutor{
         Set<Employee> employeesSet;
 //        log("***Test HashSet: Employee");
         employeesSet = getEmployeesSet(EmployeeType.ByName);
-        for (Employee employee: employeesSet) {
+        for (Employee employee : employeesSet) {
 //            log(employee);
         }
         assertEquals(employeesSet.size(), 3);
